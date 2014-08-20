@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Tech Dinner Replacement Names</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script>
+        function DinnerController() {
+            this.names = [
+                "Gastrotechnica",
+                "Gastrotech",
+                "Gastrohub",
+                "Tech Dinner",
+                "Tech Diner",
+                "iEat",
+                "food.io",
+                "food.ly",
+                "feed.me",
+                "Nerd Dinner",
+                "eat.me",
+                "Eat me Drink Me",
+                "Tech Dine",
+                "Soft Lunch",
+                "Mix Louisville",
+                "Louisville Mixin",
+                "Grub Commit",
+                "Rebase",
+                "Fork",
+                "Fork &amp; Merge",
+                "Nerd Eat Me",
+                "Eat and Greet",
+                "Slow Roasted",
+                "Hack 'n Snack",
+                "Gitgrub",
+                "Binge 'n Merge",
+                "Marinate",
+                "Merge",
+                "NomsLou",
+                "Meat Eat Greet",
+                "Finish Your Plate",
+                "Unzip lou",
+                "Dinnergize",
+                "Mash up",
+                "A La Carte",
+                "Apertif",
+                "Deploy",
+                "Lou Roux",
+                "Simmer",
+                "Byte",
+                "Clister",
+                "Config",
+                "Repository",
+                "Ameliorate",
+                "Spaghetti Code",
+                "Herati ?",
+                "Clister Fork",
+                "Eat Pray Code",
+                "Lambda Chops",
+            ]
+        }
+
+        angular.module('DinnerNames', [])
+            .controller('DinnerController', DinnerController);
+    </script>
+
+</head>
+
+
+<body ng-app="DinnerNames" ng-controller="DinnerController as dinner">
+
+    <div class="container">
+        <h1>Better Names fer Things <small>specifically, the Louisville Tech Dinner</small></h1>
+        <div class="well" ng-repeat="name in dinner.names">
+            <h3> {{$index + 1}}. {{name}} </h3>
+        </div>
+    </div>
+
+</body>
+</html>
+
