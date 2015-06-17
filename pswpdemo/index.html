@@ -32,19 +32,18 @@ window.onload = function() {
 
   // define options (if needed)
   var options = {
-      // optionName: 'option value'
-      // for example:
       index: 0 // start at first slide
   };
 
   // Initializes and opens PhotoSwipe
-  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-
   var trigger = document.getElementById("gallery_trigger");
-  trigger.addEventListener('click', function() {
-    console.log("click");
+
+  trigger.onclick = function(e) {
+    e.preventDefault();
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
-  });
+  };
 };
 
 
